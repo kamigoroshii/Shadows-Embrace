@@ -103,3 +103,14 @@ setInterval(() => {
     }
 }, 3000);
 
+
+    // Initialize skill bars
+    const skillItems = document.querySelectorAll('.skill-item');
+    skillItems.forEach(item => {
+        const level = item.dataset.level;
+        const fill = item.querySelector('.skill-fill');
+        fill.style.width = level + '%';
+    });
+
+
+    

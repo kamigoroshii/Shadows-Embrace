@@ -81,7 +81,7 @@ canvas {
 
 .navbar a {
     font-size: 1.8rem;
-    color: var(--text-color);
+    color: var(--main-color);
     font-weight: 500;
     transition: 0.3s ease;
     border-bottom: 3px solid transparent;
@@ -297,7 +297,7 @@ span {
     background: rgba(0, 0, 0, 0.8);
     padding: 2rem;
     border-left: 3px solid var(--main-color);
-    transition: 0.3s ease;
+    transition: 0.1s ease;
     cursor: pointer;
     color: var(--text-color);
     position: relative;
@@ -313,12 +313,13 @@ span {
     height: 100%;
     background: var(--main-color);
     box-shadow: 0 0 15px var(--main-color);
-    transition: 0.3s ease;
+    transition: 0.1s ease;
 }
 
 .project-item:hover {
     transform: translateX(10px);
     background: rgba(39, 153, 39, 0.1);
+  
 }
 
 .project-item:hover::before {
@@ -335,7 +336,7 @@ span {
 .project-item p {
     font-size: 1.4rem;
     opacity: 0.8;
-    transition: 0.3s ease;
+    transition: 0.1s ease;
 }
 
 .project-item:hover p {
@@ -343,87 +344,147 @@ span {
 }
 
 
-
 /* Skills Section */
 .skill {
-    width: 90%;
-    max-width: 500px;
-    margin: 60px auto;
-    color: var(--main-color);
-    padding: 20px;
-    box-shadow: 0 14px 28px rgba(0, 0, 0, .2), 0 10px 10px rgba(0, 0, 0, .2);
+    padding: 6rem 9% 2rem;
 }
 
 .skill h1 {
     text-align: center;
-    font-size: clamp(2.5rem, 5vw, 3.5rem);
-    margin-bottom: 3rem;
+    font-size: clamp(3rem, 6vw, 4rem);
+    margin-bottom: 5rem;
     color: var(--main-color);
     text-shadow: 0 0 15px var(--main-color);
 }
 
-.skill li {
-    list-style: none;
-    margin: 2.5rem 0;
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 3rem;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-.skill li h3 {
-    font-size: 1.8rem;
-    text-transform: uppercase;
+.skills-card {
+    background: rgba(0, 0, 0, 0.8);
+    padding: 3rem;
+    border-radius: 2rem;
+    border: 2px solid var(--main-color);
+    transition: 0.3s ease;
+}
+
+.skills-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 25px rgba(39, 153, 39, 0.2);
+}
+
+.skills-card h3 {
+    font-size: 2.4rem;
+    color: var(--main-color);
+    margin-bottom: 2.5rem;
+    text-align: center;
+}
+
+.skill-bars {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+}
+
+.skill-item {
+    position: relative;
+    cursor: pointer;
+}
+
+.skill-info {
+    display: flex;
+    justify-content: space-between;
     margin-bottom: 1rem;
+}
+
+.skill-name {
+    font-size: 1.6rem;
     color: var(--text-color);
 }
 
-.bar {
-    height: 20px;
+.skill-percentage {
+    font-size: 1.6rem;
+    color: var(--main-color);
+}
+
+.skill-bar {
+    height: 1rem;
     background: rgba(39, 153, 39, 0.1);
-    border: 1px solid var(--main-color);
-    border-radius: 10px;
+    border-radius: 0.5rem;
     overflow: hidden;
-    box-shadow: 0 0 10px rgba(39, 153, 39, 0.3);
     position: relative;
 }
 
-.bar span {
+.skill-fill {
     height: 100%;
-    float: left;
     background: var(--main-color);
-    box-shadow: 0 0 15px var(--main-color);
-    transition: width 1.5s ease-in-out;
+    border-radius: 0.5rem;
+    transition: width 1s ease-in-out;
+    position: relative;
+    box-shadow: 0 0 10px var(--main-color);
 }
 
-.html {
-    width: 90%;
-    animation: html 3s;
+.skill-details {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    padding: 1.5rem;
+    border-radius: 1rem;
+    border: 1px solid var(--main-color);
+    opacity: 0;
+    transform: translateY(10px);
+    transition: all 0.3s ease;
+    pointer-events: none;
+    z-index: 10;
 }
 
-.css {
-    width: 70%;
-    animation: css 3s;
+.skill-item:hover .skill-details {
+    opacity: 1;
+    transform: translateY(5px);
 }
 
-.python {
-    width: 75%;
-    animation: python 3s;
+.skill-details p {
+    font-size: 1.4rem;
+    color: var(--text-color);
+    margin-bottom: 0.5rem;
 }
 
-.cpp {
-    width: 45%;
-    animation: cpp 3s;
+.metrics-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
 }
 
-.java {
-    width: 60%;
-    animation: java 3s;
+.metric-item {
+    background: rgba(39, 153, 39, 0.1);
+    padding: 1.5rem;
+    border-radius: 1rem;
+    border: 1px solid var(--main-color);
 }
 
-@keyframes html {
-    0% {
-        width: 0%;
-    }
-    100% {
-        width: 90%;
-    }
+.metric-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-size: 1.6rem;
+}
+
+.metric-header i {
+    color: var(--main-color);
+    font-size: 2rem;
+}
+
+.metric-value {
+    margin-left: auto;
+    color: var(--main-color);
+    font-weight: bold;
 }
 
 
