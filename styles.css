@@ -136,6 +136,8 @@ span {
     margin-top: 1.5rem;
     line-height: 1.2;
     letter-spacing: 2px;
+    color: green;
+    text-shadow: 0 0 10px #015401;
 }
 
 .home-img {
