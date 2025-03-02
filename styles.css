@@ -161,9 +161,9 @@ span {
 }
 
 .home-img img:hover {
-    box-shadow: 0 0 15px var(--main-color),
-                0 0 40px var(--main-color),
-                0 0 75px var(--main-color);
+    box-shadow: 0 0 10px var(--main-color),
+                0 0 10px var(--main-color),
+                0 0 10px var(--main-color);
 }
 
 .home-content p {
@@ -217,7 +217,6 @@ span {
     width: 3.5rem;
     height: 3.5rem;
     background-color: transparent;
-    
     font-size: 2.5rem;
     border-radius: 0;
     color: var(--main-color);
@@ -588,7 +587,7 @@ span {
     .home-img img {
         width: 60vw; /* Increase from 60vw to 90vw for smaller screens */
         margin: 1rem auto;
-        height:60vw;
+        height:40vw;
     }
 
     .about-content,
@@ -597,8 +596,9 @@ span {
     }
 
     .social-icons a {
-        width: 3.8rem;
-        height: 3.8rem;
+        width: 3.5rem;
+        height: 3.5rem;
+
     }
     .text-container {
         height: 1.8em;
@@ -612,7 +612,7 @@ span {
 @media (max-width: 365px) {
     .home-img img {
         width: 60vw;
-        height: 60vw;
+        height: 40vw;
     }
 
     .about-content,
