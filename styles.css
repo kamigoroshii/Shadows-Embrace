@@ -214,12 +214,12 @@ span {
     display: inline-flex;
     justify-content: center;
     align-items: center;
-    width: 4.5rem;
-    height: 4.5rem;
+    width: 3.5rem;
+    height: 3.5rem;
     background-color: transparent;
     border: 2px solid var(--main-color);
     font-size: 2.5rem;
-    border-radius: 50%;
+    border-radius: 0;
     color: var(--main-color);
     transition: 0.3s ease-in-out;
 }
