@@ -156,14 +156,14 @@ span {
     object-fit: cover;
     border-radius: 20px;
     box-shadow: 0 0 25px var(--main-color);
-    transition: 0.4s ease-in-out;
+    transition: 0.2s ease-in-out;
     cursor: pointer;
 }
 
 .home-img img:hover {
-    box-shadow: 0 0 25px var(--main-color),
-                0 0 50px var(--main-color),
-                0 0 100px var(--main-color);
+    box-shadow: 0 0 15px var(--main-color),
+                0 0 40px var(--main-color),
+                0 0 75px var(--main-color);
 }
 
 .home-content p {
@@ -217,7 +217,7 @@ span {
     width: 3.5rem;
     height: 3.5rem;
     background-color: transparent;
-    border: 2px solid var(--main-color);
+    
     font-size: 2.5rem;
     border-radius: 0;
     color: var(--main-color);
@@ -226,8 +226,8 @@ span {
 
 .social-icons a:hover {
     color: var(--text-color);
-    transform: scale(1.3) translateY(-5px);
-    box-shadow: 0 0 25px var(--main-color);
+    transform: scale(1.0) translateY(-3px);
+    box-shadow: 0 0 15px var(--main-color);
     background-color: var(--main-color);
 }
 
@@ -520,8 +520,8 @@ span {
 
   
     .home-img img {
-        width: 80vw; /* Increase from 70vw to 80vw for better mobile view */
-        max-width: 400px;
+        width: 60vw; /* Increase from 70vw to 80vw for better mobile view */
+        max-width: 300px;
         margin: 2rem auto; /* Center the image */
     }
 
@@ -609,7 +609,7 @@ span {
 
 @media (max-width: 365px) {
     .home-img img {
-        width: 90vw;
+        width: 60vw;
         height: 90vw;
     }
 
