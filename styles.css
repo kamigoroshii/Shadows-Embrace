@@ -521,6 +521,7 @@ span {
   
     .home-img img {
         width: 60vw; /* Increase from 70vw to 80vw for better mobile view */
+        height:60vw;
         max-width: 300px;
         margin: 2rem auto; /* Center the image */
     }
@@ -587,6 +588,7 @@ span {
     .home-img img {
         width: 60vw; /* Increase from 60vw to 90vw for smaller screens */
         margin: 1rem auto;
+        height:60vw;
     }
 
     .about-content,
@@ -610,7 +612,7 @@ span {
 @media (max-width: 365px) {
     .home-img img {
         width: 60vw;
-        height: 90vw;
+        height: 60vw;
     }
 
     .about-content,
